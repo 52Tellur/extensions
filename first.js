@@ -27,8 +27,8 @@ class Scratch3NewBlock {
         };
     }
 
-    trueblk({args}) {
-        return args.TEXT;
+    trueblk({TEXT}) {
+        return TEXT;
     }
 
 Scratch.extensions.register(Sratch3NewBlock());
