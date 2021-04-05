@@ -28,7 +28,16 @@ class Scratch3NewBlock {
     }
 
     trueblk({TEXT}) {
-        return TEXT;
+        if menu="true"{
+            return true;
+        } else if menu="false"{
+            return false;
+        }else if menu="Infinity"{
+            return Infinity;
+        }else {
+            return NaN;
+        }
+        
     }
 
 Scratch.extensions.register(Sratch3NewBlock());
