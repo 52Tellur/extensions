@@ -15,55 +15,6 @@ class Utilities {
 
       blocks: [
         {
-          opcode: 'isExactly',
-
-          blockType: Scratch.BlockType.BOOLEAN,
-
-          text: 'is [A] exactly [B]?',
-          arguments: {
-            A: {
-              type: Scratch.ArgumentType.STRING,
-              defaultValue: 'apple'
-            },
-            B: {
-              type: Scratch.ArgumentType.STRING,
-              defaultValue: 'APPLE'
-            }
-          }
-        },
-        {
-          opcode: 'isLessOrEqual',
-
-          blockType: Scratch.BlockType.BOOLEAN,
-
-          text: '[A] <= [B]',
-          arguments: {
-            A: {
-              type: Scratch.ArgumentType.NUMBER
-            },
-            B: {
-              type: Scratch.ArgumentType.NUMBER,
-              defaultValue: 50
-            }
-          }
-        },
-        {
-          opcode: 'isMoreOrEqual',
-
-          blockType: Scratch.BlockType.BOOLEAN,
-
-          text: '[A] >= [B]',
-          arguments: {
-            A: {
-              type: Scratch.ArgumentType.NUMBER
-            },
-            B: {
-              type: Scratch.ArgumentType.NUMBER,
-              defaultValue: 50
-            }
-          }
-        },
-        {
           opcode: 'trueBlock',
           blockType: Scratch.BlockType.BOOLEAN,
           text: 'true'
@@ -182,41 +133,8 @@ class Utilities {
             }
           }
         },
-        {
-          opcode: 'regexReplace',
-
-          blockType: Scratch.BlockType.REPORTER,
-
-          text: 'replace [STRING] using the rule [REGEX] with [NEWSTRING]',
-          arguments: {
-            STRING: {
-              type: Scratch.ArgumentType.STRING,
-              defaultValue: 'bananas are awesome. i like bananas.'
-            },
-            REGEX: {
-              type: Scratch.ArgumentType.STRING,
-              defaultValue: 'banana'
-            },
-            NEWSTRING: {
-              type: Scratch.ArgumentType.STRING,
-              defaultValue: 'apple'
-            }
-          }
-        }
       ]
     }
-  }
-
-  isExactly({A, B}) {
-    return A === B;
-  }
-
-  isLessOrEqual({A, B}) {
-    return A <= B;
-  }
-
-  isMoreOrEqual({A, B}) {
-    return A >= B;
   }
 
   trueBlock() {
@@ -275,10 +193,6 @@ class Utilities {
 
   stringToBoolean({STRING}) {
     return STRING;
-  }
-
-  regexReplace({STRING, REGEX, NEWSTRING}) {
-    return STRING.toString().replace(new RegExp(REGEX, 'gi'), NEWSTRING);
   }
 
 }
