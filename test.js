@@ -7,7 +7,7 @@ class NitroBlock {
             "blocks": [
               {
               "opcode": "substringy",
-              "blockType": "reporter",
+              "blockType": Scratch.BlockType.REPORTER,
               "text": "letters [num1] through [num2] of [string]",
               "arguments": {
                   "num1": {
