@@ -28,11 +28,11 @@ class Scratch3NewBlock {
     }
 
     trueblk({TEXT}) {
-        if menu="true"{
+        if TEXT="true"{
             return true;
-        } else if menu="false"{
+        } else if TEXT="false"{
             return false;
-        }else if menu="Infinity"{
+        }else if TEXT="Infinity"{
             return Infinity;
         }else {
             return NaN;
