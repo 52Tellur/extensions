@@ -16,31 +16,6 @@ class Scratch3NewBlock {
                             menu: "moji"
                         }
                     }
-                },
-                {
-                    opcode: 'falseblk',
-                    blockType: Scratch.BlockType.BOOLEAN,
-                    text: '[TEXT]を返す',
-                    arguments: {
-                        TEXT: {
-                            type: ArgumentType.STRING,
-                            defaultValue: "true",
-                            menu: "moji"
-                        }
-                    }
-                },
-
-                {
-                    opcode: 'infblk',
-                    blockType: Scratch.BlockType.BOOLEAN,
-                    text: '[TEXT]を返す',
-                    arguments: {
-                        TEXT: {
-                            type: ArgumentType.STRING,
-                            defaultValue: "true",
-                            menu: "moji"
-                        }
-                    }
                 }
             ],
             menus: {
