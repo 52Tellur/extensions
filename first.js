@@ -1,14 +1,9 @@
 class Scratch3NewBlock {
-    constructor (runtime) {
-        this.runtime = runtime;
-        this.text = "";
-        this.changed = 0;
-        this.lasthat = false;
-    }
+    constructor () {}
     getInfo () {
         return {
             id: 'newblock',
-            name: '返す系',
+            name: 'DevSample',
             blocks: [
                 {
                     opcode: 'reporter1',
@@ -16,7 +11,7 @@ class Scratch3NewBlock {
                     text: '[TEXT]を返す',
                     arguments: {
                         TEXT: {
-                            type: Scratch.ArgumentType.STRING,
+                            type: ArgumentType.STRING,
                             defaultValue: "true",
                             menu: "moji"
                         }
@@ -73,11 +68,11 @@ class Scratch3NewBlock {
                 },
                 {
                     opcode: 'writeLog5',
-                    blockType: BlockType.BUTTON,
+                    blockType: Scratch.BlockType.BUTTON,
                     text: 'button',
                     arguments: {
                         TEXT: {
-                            type: Scratch.ArgumentType.STRING,
+                            type: ArgumentType.STRING,
                             defaultValue: "true",
                             menu: "moji"
                         }
@@ -148,26 +143,21 @@ class Scratch3NewBlock {
         };
     }
 
-    boolean1({args}) {
+    trueblk({args}) {
         return args.TEXT;
     }
 
-    conditional1({args}) {
+    falseblk({args}) {
         return args.TEXT;
     }
 
-    command1({args}) {
+    Infblk({args}) {
         this.text = Cast.toString(args.TEXT);
     }
 
-    send1({args}) {
+    nanblk({args}) {
         this.changed = true;
     }
-    // hat1({args}) {
-    //     var rtn = this.changed;
-    //     this.changed = false;
-    //     return rtn;
-    // }
 
     hat1({args}) {
         var rtn = this.changed && (!this.lasthat);
