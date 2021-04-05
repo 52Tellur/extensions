@@ -40,11 +40,6 @@ class Utilities {
           }
         },
         {
-          opcode: 'pi',
-          blockType: Scratch.BlockType.REPORTER,
-          text: 'pi'
-        },
-        {
           opcode: 'ternaryOperator',
 
           blockType: Scratch.BlockType.REPORTER,
@@ -132,7 +127,7 @@ class Utilities {
               defaultValue: 'true'
             }
           }
-        },
+        }
       ]
     }
   }
@@ -147,10 +142,6 @@ class Utilities {
 
   exponent({A, B}) {
     return Math.pow(A, B);
-  }
-
-  pi() {
-    return Math.PI;
   }
 
   ternaryOperator({A, B, C}) {
