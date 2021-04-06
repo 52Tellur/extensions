@@ -11,9 +11,9 @@ class Tellur {
          text: '[X]を返す', 
          arguments: {
            X: {
-             type: "string",
-             menu: 'retu',
-             defaultValue: 'true'
+             "type": "string",
+             "menu": "retu",
+             "defaultValue": "true"
            }
          }
        }
@@ -21,7 +21,7 @@ class Tellur {
       menus: {
         retu: [{text:'true',value:true}{text:'false',value:false}{text'Infinity',value:Infinity}{text'NaN',value:NaN}]
       }
-    }
+    };
   }
   retur({X}) {
     return X;
