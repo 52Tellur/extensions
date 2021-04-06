@@ -44,4 +44,5 @@ class Tellur {
   jyou(args){
    return Math.pow(args.X, args.N); 
   }
+}
 Scratch.extensions.register(new Tellur());
