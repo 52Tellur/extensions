@@ -24,7 +24,7 @@ class Tellur {
    }
  }
  power(args) {
- x === N;
+ return X === N;
  }
 }
 Scratch.extensions.register(new Tellur());
