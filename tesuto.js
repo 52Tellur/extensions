@@ -18,8 +18,8 @@ class Tellur {
          }
        }
      ],
-      menus: {
-        retu: [{text:'true',value:true},{text:'false',value:false},{text'Infinity',value:Infinity},{text'NaN',value:NaN}],
+      "menus": {
+        "retu": [{text:'true',value:true},{text:'false',value:false},{text'Infinity',value:Infinity},{text'NaN',value:NaN}],
       }
     };
   }
