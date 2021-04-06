@@ -11,11 +11,11 @@ class NitroBlock {
               text: "letters [num1] through [num2] of [string]",
               arguments: {
                   num1: {
-                    type: Scratch.ArgumentType.number,
+                    type: "number",
                     defaultValue: "2"
                   },
                   num2: {
-                    type: Scratch.ArgumentType.number,
+                    type: "number",
                     defaultValue: "5"
                   },
                   string: {
