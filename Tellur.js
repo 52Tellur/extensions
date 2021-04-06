@@ -47,7 +47,7 @@ class Tellur {
          }
        }
      ],
-     menus: {
+     menu: {
        hantei: {
          acceptReporters: true,
          items: [{ text: "true", value: "true"}, {text: "false", value: "false"},{ text: "Infinity", value: "Infinity"},{ text: "NaN", value: "NaN"}]
