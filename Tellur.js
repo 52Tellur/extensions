@@ -23,7 +23,7 @@ class Tellur {
      ]
    }
  }
- power(args) {
+ power({X,N}) {
  return X === N;
  }
 }
