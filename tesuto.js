@@ -24,7 +24,7 @@ class Tellur {
     };
   }
   retur(args) {
-    return X;
+    return "X";
   }
 }
 Scratch.extensions.register(new Tellur());
