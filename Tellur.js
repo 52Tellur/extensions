@@ -41,7 +41,7 @@ class Tellur {
   same({X,N}) {
    return X === N;
   }
-  jyou({X,N}){
+  jyou(args){
    return Math.pow(args.X, args.N); 
   }
 }
