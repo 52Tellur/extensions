@@ -19,7 +19,8 @@ class Tellur {
        }
      ],
       "menus": {
-        "retu": [{text:'true',value:true},{text:'false',value:false},{text'Infinity',value:Infinity},{text'NaN',value:NaN}],
+        acceptReporters: true,
+        "retu": [{text:'true',value:true},{text:'false',value:false},{text'Infinity',value:Infinity},{text'NaN',value:NaN}]
       }
     };
   }
