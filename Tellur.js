@@ -8,7 +8,22 @@ class Tellur {
        {
          opcode: 'same',
          blockType: Scratch.BlockType.BOOLEAN,
-         text: '[X]と[N]は同じ', 
+         text: '[X]と[N]は全く同じ', 
+         arguments: {
+           X: {
+             type: "string",
+             defaultValue: 'ｓ'
+           },
+           N: {
+             type: "string",
+             defaultValue: 's'
+           }
+         }
+       },
+       {
+         opcode: 'wrong',
+         blockType: Scratch.BlockType.BOOLEAN,
+         text: '[X]≠[N]', 
          arguments: {
            X: {
              type: "string",
@@ -40,6 +55,9 @@ class Tellur {
  }
   same({X,N}) {
    return X === N;
+  }
+  wrong({X,N}) {
+   return X !== N;
   }
   jyou(args){
    return Math.pow(args.X, args.N); 
