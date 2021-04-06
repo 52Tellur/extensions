@@ -34,9 +34,27 @@ class Tellur {
              defaultValue: '2'
            }
          }
+       },
+       {
+         opcode: 'reporter',
+         blockType: Scratch.BlockType.REPORTER,
+         text: '[TEXT]を返す',
+         arguments: {
+           TEXT: {
+             type: "string",
+             defaultValue: "true",
+             menu: "hantei"
+            }
+         }
        }
-     ]
-   }
+     ],
+     menus: {
+       hantei: {
+         acceptReporters: true,
+         items: [{ text: "true", value: "true"}, {text: "false", value: "false"},{ text: "Infinity", value: "Infinity"},{ text: "NaN", value: "NaN"}]
+       }
+     }
+   };
  }
   same({X,N}) {
    return X === N;
@@ -44,5 +62,8 @@ class Tellur {
   jyou(args){
    return Math.pow(args.X, args.N); 
   }
-}
+  }
+  boolean1(args) {
+    return args.TEXT;
+  }
 Scratch.extensions.register(new Tellur());
