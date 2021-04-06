@@ -5,7 +5,7 @@ class Tellur {
      id: 'Tellur',
      name: 'Tellur',
      blocks: [
-         {
+       {
          opcode: 'same',
          blockType: Scratch.BlockType.REPORTER,
          text: '[X]と[N]は同じ', 
@@ -20,17 +20,17 @@ class Tellur {
            }
          }
        },
-         {
+       {
          opcode: 'jyou',
          blockType: Scratch.BlockType.REPORTER,
          text: '[X]の[N]乗', 
          arguments: {
            X: {
-             type: Scratch.ArgumentType.NUMBER,
+             type: "number",
              defaultValue: '2'
            },
            N: {
-             type: Scratch.ArgumentType.NUMBER,
+             type: "number",
              defaultValue: '3'
            }
          }
@@ -43,5 +43,6 @@ class Tellur {
   }
   jyou({X,N}){
    return Math.pow(args.X, args.N); 
+  }
 }
 Scratch.extensions.register(new Tellur());
