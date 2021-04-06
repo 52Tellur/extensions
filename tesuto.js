@@ -6,43 +6,25 @@ class Tellur {
      name: '返す系',
      blocks: [
        {
-         opcode: 'same',
+         opcode: 'retur',
          blockType: Scratch.BlockType.BOOLEAN,
-         text: '[X]と[N]は同じ', 
+         text: '[X]を返す', 
          arguments: {
            X: {
              type: "string",
-             defaultValue: '2'
-           },
-           N: {
-             type: "string",
-             defaultValue: '3'
-           }
-         }
-       },
-       {
-         opcode: 'jyou',
-         blockType: Scratch.BlockType.REPORTER,
-         text: '[X]の[N]乗', 
-         arguments: {
-           X: {
-             type: "number",
-             defaultValue: '3'
-           },
-           N: {
-             type: "number",
-             defaultValue: '2'
+             menu: 'retu',
+             defaultValue: 'true'
            }
          }
        }
-     ]
-   }
- }
-  same({X,N}) {
-   return X === N;
+     ],
+      menus: {
+        retu: [{text:'true',value:true}{text:'false',value:false}{text'Infinity',value:Infinity}{text'NaN',value:NaN}]
+      }
+    }
   }
-  jyou(args){
-   return Math.pow(args.X, args.N); 
+  retur({X}) {
+    return X;
   }
 }
 Scratch.extensions.register(new Tellur());
