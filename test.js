@@ -27,7 +27,7 @@ class NitroBlock {
          ]
         }
     }
-    substringy(args) {
+    substringy({num1,num2,string}) {
         return string.substring(num1 - 1, num2);
     }
 }
