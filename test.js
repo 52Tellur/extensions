@@ -8,14 +8,14 @@ class NitroBlock {
               {
               opcode: 'substringy',
               blockType: Scratch.BlockType.REPORTER,
-              text: letters [num1] through [num2] of [string]",
+              text: "letters [num1] through [num2] of [string]",
               arguments: {
                   num1: {
-                    type: "number",
+                    type: Scratch.ArgumentType.number,
                     defaultValue: "2"
                   },
                   num2: {
-                    type: "number",
+                    type: Scratch.ArgumentType.number,
                     defaultValue: "5"
                   },
                   string: {
