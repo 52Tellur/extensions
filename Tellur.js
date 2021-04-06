@@ -36,13 +36,12 @@ class Tellur {
          }
        },
        {
-         opcode: 'reporter',
+         opcode: 'tfin',
          blockType: Scratch.BlockType.REPORTER,
          text: '[TEXT]を返す',
          arguments: {
            TEXT: {
              type: "string",
-             defaultValue: "true",
              menu: "hantei"
             }
          }
@@ -63,7 +62,7 @@ class Tellur {
    return Math.pow(args.X, args.N); 
   }
   }
-  boolean1(args) {
-    return args.TEXT;
+  tfin({TEXT}) {
+    return TEXT;
   }
 Scratch.extensions.register(new Tellur());
