@@ -7,7 +7,7 @@ class Tellur {
      blocks: [
        {
          opcode: 'same',
-         blockType: Scratch.BlockType.REPORTER,
+         blockType: Scratch.BlockType.Boolean,
          text: '[X]と[N]は同じ', 
          arguments: {
            X: {
