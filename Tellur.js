@@ -8,14 +8,14 @@ class Tellur {
          {
          opcode: 'power',
          blockType: Scratch.BlockType.REPORTER,
-         text: '[X]===[N]', 
+         text: '[X]と[N]は同じ', 
          arguments: {
            X: {
-             type: Scratch.ArgumentType.NUMBER,
+             type: "string",
              defaultValue: '2'
            },
            N: {
-             type: Scratch.ArgumentType.NUMBER,
+             type: "string",
              defaultValue: '3'
            }
          }
