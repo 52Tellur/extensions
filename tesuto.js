@@ -20,10 +20,11 @@ class Tellur {
      ],
       menus: {
         acceptReporters: true,
-        retu: [{text:'true',value:true},{text:'false',value:false},{text'Infinity',value:Infinity},{text'NaN',value:NaN}]
+        retu: [
+          items: ['true', 'false', 'Infinity', 'NaN'],
       }
     };
-  }
+  };
   retur({X}) {
     return X;
   }
