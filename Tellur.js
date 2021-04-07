@@ -83,5 +83,6 @@ class Tellur {
   }
   andand({X,Y,Z}){
     return X+Y+Z;
+  }
 }
 Scratch.extensions.register(new Tellur());
