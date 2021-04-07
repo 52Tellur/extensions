@@ -108,11 +108,6 @@ class Tellur {
              defaultValue: '海'
            }
          }
-       },
-       {
-         opcode: 'break',
-         blockType: Scratch.BlockType.CAP,
-         text: 'ループから抜ける',
        }
      ]
    }
@@ -146,9 +141,6 @@ class Tellur {
     } else{
       return Z;
     }
-  }
-  break(){
-    break;
   }
 }
 Scratch.extensions.register(new Tellur());
