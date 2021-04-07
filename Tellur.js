@@ -68,6 +68,25 @@ class Tellur {
              defaultValue: 'ブドウ'
            }
          }
+       },
+       {
+         opcode: 'smallbig',
+         blockType: Scratch.BlockType.BOOLEAN,
+         text: '[X]<[Y]<[Z]', 
+         arguments: {
+           X: {
+             type: "number",
+             defaultValue: '0'
+           },
+           Y: {
+             type: "number",
+             defaultValue: '25'
+           },
+           Z: {
+             type: "number",
+             defaultValue: '50'
+           }
+         }
        }
      ]
    }
@@ -83,6 +102,9 @@ class Tellur {
   }
   andand({X,Y,Z}){
     return X+Y+Z;
+  }
+  smallbig({X,Y,Z}){
+    return X<Y<Z;
   }
 }
 Scratch.extensions.register(new Tellur());
