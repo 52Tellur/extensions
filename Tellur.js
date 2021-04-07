@@ -14,7 +14,7 @@ class Tellur {
          text: '[X]を返す', 
          arguments: {
            X: {
-             type: Scratch.ArgumentType.STRING,
+             type: "string",
              menu: "retu",
              defaultValue: "true"
            }
@@ -23,7 +23,7 @@ class Tellur {
        {
          opcode: 'ijyou',
          blockType: Scratch.BlockType.BOOLEAN,
-         text: '[X] [Y] [Z]', 
+         text: '  [X] [Y] [Z]  ', 
          arguments: {
            X: {
              type: "string",
