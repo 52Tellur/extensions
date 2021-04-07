@@ -23,11 +23,11 @@ class Tellur {
        {
          opcode: 'ijyou',
          blockType: Scratch.BlockType.BOOLEAN,
-         text: '[X][Y][Z]', 
+         text: '[X] [Y] [Z]', 
          arguments: {
            X: {
              type: "string",
-             defaultValue: ""
+             defaultValue: "0"
            },
            Y: {
              type: "string",
@@ -52,21 +52,6 @@ class Tellur {
            N: {
              type: "string",
              defaultValue: 's'
-           }
-         }
-       },
-       {
-         opcode: 'wrong',
-         blockType: Scratch.BlockType.BOOLEAN,
-         text: '[X]≠[N]', 
-         arguments: {
-           X: {
-             type: "string",
-             defaultValue: '2'
-           },
-           N: {
-             type: "string",
-             defaultValue: '3'
            }
          }
        },
@@ -100,7 +85,7 @@ class Tellur {
            },
            Z: {
              type: "string",
-             defaultValue: 'ブドウ'
+             defaultValue: '桃'
            }
          }
        },
@@ -148,16 +133,13 @@ class Tellur {
           items: ['true', 'false', 'Infinity', 'NaN'],
         },
         ijyou: {
-          items: ['≦','≧'],
+          items: ['≦','≧','<','>','≠'],
         },
       }
     };
   };
   same({X,N}) {
    return X === N;
-  }
-  wrong({X,N}) {
-   return X !== N;
   }
   jyou(args){
    return Math.pow(args.X, args.N); 
@@ -188,6 +170,12 @@ class Tellur {
       return X <= Z;
     } else if(Y==="≧"){
       return X >= Z;
+    } else if(Y==="<"){
+      return X < Z;
+    }else if(Y===">"){
+      return X > Z;
+    }else if(Y==="≠"){
+      return X !== Z;
     }else{
       return "Undefined";
     }
