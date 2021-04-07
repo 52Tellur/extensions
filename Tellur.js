@@ -31,7 +31,7 @@ class Tellur {
            },
            Y: {
              type: "string",
-             menu: "ijyou"
+             menu: "ijyou",
              defaultValue: "≦"
            },
            Z: {
