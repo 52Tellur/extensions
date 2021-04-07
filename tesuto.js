@@ -26,7 +26,7 @@ class Tellur {
       }
     };
   };
-  retur(arg) {
+  retur(args) {
     return X;
   }
 }
