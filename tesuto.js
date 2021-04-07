@@ -13,14 +13,14 @@ class Tellur {
            X: {
              type: "string",
              menu: "retu",
-             defaultValue: "true"
            }
          }
        }
      ],
       menus: {
         acceptReporters: true,
-        retu: {['true', 'false', 'Infinity', 'NaN'],
+        retu: {
+          items: ['true', 'false', 'Infinity', 'NaN'],
         },
       }
     };
