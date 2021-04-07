@@ -114,7 +114,8 @@ class Tellur {
          text: 'もし[X]なら[Y]でなければ[Z]',
          arguments: {
            X: {
-             type: Scratch.ArgumentType.BOOLEAN
+             type: Scratch.ArgumentType.BOOLEAN,
+             defauleValue: true
            },
            Y: {
              type: "string",
@@ -129,7 +130,7 @@ class Tellur {
      ],
       menus: {
         retu: {
-          items: ['true', 'false', 'Infinity', 'NaN'],
+          items: ['true', 'false', 'Infinity', 'NaN','Undifined'],
         },
         ijyou: {
           items: ['≦','≧','<','>','≠'],
