@@ -5,7 +5,7 @@ class Tellur {
       id: 'Tellur',
       name: 'Tellur',
       color1: '#7BB8EE',
-      color2: '#0000ff',
+      color2: '#1005ff',
       color3: '#4622FF',
      blocks: [
        {
@@ -97,7 +97,7 @@ class Tellur {
          text: 'もし[X]なら[Y]でなければ[Z]', 
          arguments: {
            X: {
-             type: "boolean",
+             type: "boolean"
            },
            Y: {
              type: "string",
