@@ -4,9 +4,9 @@ class Tellur {
     return {
       id: 'Tellur',
       name: 'Tellur',
-      color1: '#b5958a',
-      color2: '#95f56f',
-      color3: '#bcda8f',
+      color1: '#ADD6D4',
+      color2: '#6CB8B8',
+      color3: '#50B965',
      blocks: [
        {
          opcode: 'retur',
@@ -23,7 +23,7 @@ class Tellur {
        {
          opcode: 'ijyou',
          blockType: Scratch.BlockType.BOOLEAN,
-         text: '  [X] [Y] [Z].', 
+         text: '.[X] [Y] [Z].', 
          arguments: {
            X: {
              type: "string",
@@ -114,11 +114,11 @@ class Tellur {
          text: 'もし[X]なら[Y]でなければ[Z]',
          arguments: {
            X: {
-             type: Scratch.ArgumentType.BOOLEAN,
+             type: "boolean",
              defaulutValue: true
            },
            Y: {
-             type: Scratch.ArgumentType.STRING,
+             type: "string",
              defaultValue: '陸'
            },
            Z: {
