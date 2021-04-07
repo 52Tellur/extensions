@@ -97,8 +97,7 @@ class Tellur {
          text: 'もし[X]なら[Y]でなければ[Z]', 
          arguments: {
            X: {
-             blockType: Scratch.BlockType.BOOLEAN,
-             type: "string"
+             type: Scratch.ArgumentType.BOOLEAN
            },
            Y: {
              type: "string",
@@ -109,6 +108,11 @@ class Tellur {
              defaultValue: '海'
            }
          }
+       },
+       {
+         opcode: 'break',
+         blockType: Scratch.BlockType.CAP,
+         text: 'ループから抜ける',
        }
      ]
    }
@@ -142,6 +146,9 @@ class Tellur {
     } else{
       return Z;
     }
+  }
+  break(){
+    break;
   }
 }
 Scratch.extensions.register(new Tellur());
