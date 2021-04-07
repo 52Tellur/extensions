@@ -97,7 +97,7 @@ class Tellur {
          text: 'もし[X]なら[Y]でなければ[Z]', 
          arguments: {
            X: {
-             type: Scratch.ArgumentType.BOOLEAN
+             
            },
            Y: {
              type: "string",
