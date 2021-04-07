@@ -103,7 +103,7 @@ class Tellur {
   andand({X,Y,Z}){
     return X+Y+Z;
   }
-  smallbig({X,Y,Z}){
+  smallbig(args){
     if(X<Y){
       if(Y<Z){
         return true;
