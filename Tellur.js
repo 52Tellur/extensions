@@ -5,8 +5,8 @@ class Tellur {
       id: 'Tellur',
       name: 'Tellur',
       color1: '#7BB8EE',
-      color2: '#1355ff',
-      color3: '#4622FF',
+      color2: '#4622FF',
+      color3: '#1355ff',
      blocks: [
        {
          opcode: 'retur',
@@ -17,6 +17,26 @@ class Tellur {
              type: Scratch.ArgumentType.STRING,
              menu: "retu",
              defaultValue: "true"
+           }
+         }
+       },
+       {
+         opcode: 'ijyou',
+         blockType: Scratch.BlockType.BOOLEAN,
+         text: '[X][Y][Z]', 
+         arguments: {
+           X: {
+             type: "string",
+             defaultValue: ""
+           },
+           Y: {
+             type: "string",
+             menu: "ijyou"
+             defaultValue: "≦"
+           },
+           Z: {
+             type: "string",
+             defaultValue: "50"
            }
          }
        },
@@ -127,6 +147,9 @@ class Tellur {
         retu: {
           items: ['true', 'false', 'Infinity', 'NaN'],
         },
+        ijyou: {
+          items: ['≦','≧'],
+        },
       }
     };
   };
@@ -158,6 +181,15 @@ class Tellur {
       return Y;
     } else{
       return Z;
+    }
+  }
+  ijyou({X,Y,Z}){
+    if (Y==="≦"){
+      return X <= Z;
+    } else if(Y==="≧"){
+      return X >= Z;
+    }else{
+      return "Undefined";
     }
   }
 }
