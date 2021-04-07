@@ -42,11 +42,30 @@ class Tellur {
          arguments: {
            X: {
              type: "number",
-             defaultValue: '3'
+             defaultValue: '2'
            },
            N: {
              type: "number",
-             defaultValue: '2'
+             defaultValue: '3'
+           }
+         }
+       },
+       {
+         opcode: 'andand',
+         blockType: Scratch.BlockType.REPORTER,
+         text: '[X]と[Y]と[Z]', 
+         arguments: {
+           X: {
+             type: "string",
+             defaultValue: 'りんご'
+           },
+           Y: {
+             type: "string",
+             defaultValue: 'バナナ'
+           },
+           Z: {
+             type: "string",
+             defaultValue: 'ブドウ'
            }
          }
        }
@@ -62,5 +81,7 @@ class Tellur {
   jyou(args){
    return Math.pow(args.X, args.N); 
   }
+  andand({X,Y,Z}){
+    return X+Y+Z;
 }
 Scratch.extensions.register(new Tellur());
