@@ -11,9 +11,9 @@ class Tellur {
          text: '[X]を返す', 
          arguments: {
            X: {
-             "type": "string",
-             "menu": "retu",
-             "defaultValue": "true"
+             type: "string",
+             menu: "retu",
+             defaultValue: "true"
            }
          }
        }
@@ -24,8 +24,8 @@ class Tellur {
       }
     };
   }
-  retur(args) {
-    return "X";
+  retur({X}) {
+    return X;
   }
 }
 Scratch.extensions.register(new Tellur());
