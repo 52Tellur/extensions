@@ -130,9 +130,11 @@ class Tellur {
      ],
       menus: {
         retu: {
+          acceptReporters: true,
           items: ['true', 'false', 'Infinity', 'NaN','Undifined'],
         },
         ijyou: {
+          acceptReporters: true,
           items: ['≦','≧','<','>','≠'],
         },
       }
