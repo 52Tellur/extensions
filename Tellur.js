@@ -26,7 +26,7 @@ class Tellur {
        {
          opcode: 'ijyou',
          blockType: Scratch.BlockType.BOOLEAN,
-         text: '.[X] [Y] [Z]', 
+         text: '[X] [Y] [Z]', 
          arguments: {
            X: {
              type: "string",
@@ -122,11 +122,11 @@ class Tellur {
            },
            Y: {
              type: "string",
-             defaultValue: '陸'
+             defaultValue: '0'
            },
            Z: {
              type: "string",
-             defaultValue: '海'
+             defaultValue: '50'
            }
          }
        }
@@ -134,7 +134,7 @@ class Tellur {
       menus: {
         retu: {
           acceptReporters: true,
-          items: ['true', 'false', 'Infinity', 'NaN','Undifined'],
+          items: ['true', 'false', 'Infinity', 'NaN','Undefined'],
         },
         ijyou: {
           items: ['≦','≧','<','>','≠'],
