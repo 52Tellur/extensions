@@ -90,6 +90,24 @@ class Tellur {
              defaultValue: '50'
            }
          }
+       },
+       {
+         opcode: 'ifelse',
+         blockType: Scratch.BlockType.BOOLEAN,
+         text: 'もし[X]なら[Y]でなければ[Z]', 
+         arguments: {
+           X: {
+             type: "boolean",
+           },
+           Y: {
+             type: "string",
+             defaultValue: '陸'
+           },
+           Z: {
+             type: "string",
+             defaultValue: '海'
+           }
+         }
        }
      ]
    }
@@ -115,6 +133,13 @@ class Tellur {
       }
     } else{
         return false;
+    }
+  }
+  ifelse({X,Y,Z}){
+    if(X){
+      return Y;
+    } else{
+      return Z;
     }
   }
 }
