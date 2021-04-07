@@ -5,9 +5,21 @@ class Tellur {
       id: 'Tellur',
       name: 'Tellur',
       color1: '#7BB8EE',
-      color2: '#1005ff',
+      color2: '#1355ff',
       color3: '#4622FF',
      blocks: [
+       {
+         opcode: 'retur',
+         blockType: Scratch.BlockType.BOOLEAN,
+         text: '[X]を返す', 
+         arguments: {
+           X: {
+             type: Scratch.ArgumentType.STRING,
+             menu: "retu",
+             defaultValue: "true"
+           }
+         }
+       },
        {
          opcode: 'same',
          blockType: Scratch.BlockType.BOOLEAN,
@@ -110,9 +122,14 @@ class Tellur {
            }
          }
        }
-     ]
-   }
- }
+     ],
+      menus: {
+        retu: {
+          items: ['true', 'false', 'Infinity', 'NaN'],
+        },
+      }
+    };
+  };
   same({X,N}) {
    return X === N;
   }
