@@ -11,7 +11,7 @@ class Tellur {
          text: '[X]を返す', 
          arguments: {
            X: {
-             type: "string",
+             type: Scratch.ArgumentType.STRING,
              menu: "retu",
              defaultValue: "true"
            },
