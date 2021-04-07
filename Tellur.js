@@ -104,7 +104,14 @@ class Tellur {
     return X+Y+Z;
   }
   smallbig({X,Y,Z}){
-    return X<Y && Y<Z;
+    if(X<Y){
+      if(Y<Z){
+        return true;
+      } else{
+        return false;
+    } else{
+        return false;
+    }
   }
 }
 Scratch.extensions.register(new Tellur());
