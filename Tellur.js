@@ -6,7 +6,7 @@ class Tellur {
       name: 'Tellur',
       color1: '#A682FF',
       color2: '#7BB8EE',
-      color3: '#1355ff',
+      color3: '#000',
      blocks: [
        {
          opcode: 'retur',
