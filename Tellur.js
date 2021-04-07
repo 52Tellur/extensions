@@ -94,10 +94,11 @@ class Tellur {
        {
          opcode: 'ifelse',
          blockType: Scratch.BlockType.BOOLEAN,
-         text: 'もし[X]なら[Y]でなければ[Z]', 
+         text: 'もし[X]なら[Y]でなければ[Z]',
          arguments: {
            X: {
-             type: Scratch.ArgumentType.BOOLEAN
+             type: Scratch.ArgumentType.BOOLEAN,
+             defaulutValue: true
            },
            Y: {
              type: Scratch.ArgumentType.STRING,
