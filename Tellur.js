@@ -2,8 +2,11 @@ class Tellur {
   constructor() {}
   getInfo() {
     return {
-     id: 'Tellur',
-     name: 'Tellur',
+      id: 'Tellur',
+      name: 'Tellur',
+      color1: '#0000ff',
+      color2: '#7BB8EE',
+      color3: '#4622FF',
      blocks: [
        {
          opcode: 'same',
