@@ -134,7 +134,6 @@ class Tellur {
           items: ['true', 'false', 'Infinity', 'NaN','Undifined'],
         },
         ijyou: {
-          acceptReporters: true,
           items: ['≦','≧','<','>','≠'],
         },
       }
