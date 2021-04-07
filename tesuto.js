@@ -13,9 +13,10 @@ class Tellur {
            X: {
              type: "string",
              menu: "retu",
-           }
-         }
-       }
+             defaultValue: "true"
+           },
+         },
+       },
      ],
       menus: {
         acceptReporters: true,
@@ -24,7 +25,7 @@ class Tellur {
         },
       }
     };
-  }
+  };
   retur(arg) {
     return X;
   }
