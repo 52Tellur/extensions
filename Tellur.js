@@ -115,7 +115,7 @@ class Tellur {
          arguments: {
            X: {
              type: Scratch.ArgumentType.BOOLEAN,
-             defauleValue: true
+             defauleValue: 'true'
            },
            Y: {
              type: "string",
@@ -179,8 +179,6 @@ class Tellur {
       return X > Z;
     }else if(Y==="≠"){
       return X !== Z;
-    }else{
-      return "Undefined";
     }
   }
 }
