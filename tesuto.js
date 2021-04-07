@@ -20,8 +20,7 @@ class Tellur {
      ],
       menus: {
         acceptReporters: true,
-        retu: {
-          items: ['true', 'false', 'Infinity', 'NaN'],
+        retu: {['true', 'false', 'Infinity', 'NaN'],
         },
       }
     };
