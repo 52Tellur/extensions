@@ -4,9 +4,9 @@ class Tellur {
     return {
       id: 'Tellur',
       name: 'Tellur',
-      color1: '#15958a',
-      color2: '#15f56f',
-      color3: '#5cda8f',
+      color1: '#b5958a',
+      color2: '#95f56f',
+      color3: '#bcda8f',
      blocks: [
        {
          opcode: 'retur',
