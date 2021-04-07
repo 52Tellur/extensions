@@ -4,8 +4,8 @@ class Tellur {
     return {
       id: 'Tellur',
       name: 'Tellur',
-      color1: '#7BB8EE',
-      color2: '#4622FF',
+      color1: '#A682FF',
+      color2: '#7BB8EE',
       color3: '#1355ff',
      blocks: [
        {
@@ -23,7 +23,7 @@ class Tellur {
        {
          opcode: 'ijyou',
          blockType: Scratch.BlockType.BOOLEAN,
-         text: '  [X] [Y] [Z]  ', 
+         text: '  [X] [Y] [Z].', 
          arguments: {
            X: {
              type: "string",
