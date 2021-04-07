@@ -165,6 +165,9 @@ class Tellur {
       return Z;
     }
   }
+  retur({X}){
+    return X;
+  }
   ijyou({X,Y,Z}){
     if (Y==="≦"){
       return X <= Z;
