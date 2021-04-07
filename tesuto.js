@@ -22,11 +22,11 @@ class Tellur {
         acceptReporters: true,
         retu: {
           items: ['true', 'false', 'Infinity', 'NaN'],
-        }
+        },
       }
     };
-  };
-  retur({X}) {
+  }
+  retur(arg) {
     return X;
   }
 }
