@@ -12,12 +12,10 @@ class Tellur {
          arguments: {
            X: {
              type: "number",
-             menu: "retu",
              defaultValue: "94"
            },
            Y: {
              type: "number",
-             menu: "retu",
              defaultValue: "1.95"
            },
          },
