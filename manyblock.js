@@ -22,7 +22,7 @@ class Tellur {
        },
        {
          opcode: 'bmi4',
-         blockType: Scratch.BlockType.C,
+         blockType: Scratch.BlockType.COMMAND,
          text: '何か', 
        },
      ]
