@@ -8,6 +8,21 @@ class Tellur {
        {
          opcode: 'bmi',
          blockType: Scratch.BlockType.HAT,
+         text: '何か(ハットブロック)', 
+       },
+       {
+         opcode: 'bmi',
+         blockType: Scratch.BlockType.STACK,
+         text: '何か', 
+       },
+       {
+         opcode: 'bmi',
+         blockType: Scratch.BlockType.CAP,
+         text: '何か', 
+       },
+       {
+         opcode: 'bmi',
+         blockType: Scratch.BlockType.C,
          text: '何か', 
        },
      ]
