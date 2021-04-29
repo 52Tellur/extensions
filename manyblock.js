@@ -23,11 +23,11 @@ class Tellur {
        {
          opcode: 'bmi4',
          blockType: Scratch.BlockType.COMMAND,
-         text: '[x]何か',
+         text: '[x]wonarasu',
          arguments: {
            X: {
              type: Scratch.ArgumentType.STRING,
-             defaultValue: '2'
+             defaultValue: 'アラート'
            },
          }
        },
