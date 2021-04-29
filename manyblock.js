@@ -43,8 +43,8 @@ class Tellur {
   bmi3() {
     return "イェーイ";
   }
-  bmi4() {
-    return "イェーイ";
+  bmi4(x) {
+    alert( x );
   }
 }
 Scratch.extensions.register(new Tellur());
