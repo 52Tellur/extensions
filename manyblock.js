@@ -17,13 +17,13 @@ class Tellur {
        },
        {
          opcode: 'bmi3',
-         blockType: Scratch.BlockType.CAP,
+         blockType: Scratch.BlockType.COMMAND,
          text: '何か', 
        },
        {
          opcode: 'bmi4',
          blockType: Scratch.BlockType.COMMAND,
-         text: '[x]wonarasu',
+         text: '[x]をあらーとする',
          arguments: {
            X: {
              type: Scratch.ArgumentType.STRING,
