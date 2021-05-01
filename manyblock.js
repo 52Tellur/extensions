@@ -44,7 +44,7 @@ class Tellur {
     return "イェーイ";
   }
   bmi4(x) {
-    alert( x );
+    alert( x , "b");
   }
 }
 Scratch.extensions.register(new Tellur());
