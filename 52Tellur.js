@@ -19,7 +19,7 @@ class KoKa {
      ]
    }
   }
-  power({N}) {
+  power(args) {
     var calc_string = "N";
     var result = Function('return ('+calc_string+');')();
     return(calc_string);
