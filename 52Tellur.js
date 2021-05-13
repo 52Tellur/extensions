@@ -8,24 +8,19 @@ class KoKa {
          {
          opcode: 'power',
          blockType: Scratch.BlockType.REPORTER,
-         text: '[X]の[N]乗', 
+         text: '[N]を計算する', 
          arguments: {
-           X: {
-             type: Scratch.ArgumentType.NUMBER,
-             defaultValue: '2'
-           },
            N: {
-             type: Scratch.ArgumentType.NUMBER,
-             defaultValue: '3'
+             type: Scratch.ArgumentType.STRING,
+             defaultValue: '3+5'
            }
          }
        }
      ]
    }
  }
- power(args) {
- return Math.pow(args.X, args.N);
+ power({N}) {
+ return N;
  }
 }
 Scratch.extensions.register(new KoKa());
-//子供の科学で紹介されていたものです。
