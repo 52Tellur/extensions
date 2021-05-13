@@ -35,11 +35,31 @@ class Tellur {
            Y: {
              type: "string",
              menu: "ijyou",
-             defaultValue: "≦"
+             defaultValue: "<="
            },
            Z: {
              type: "string",
              defaultValue: "50"
+           }
+         }
+       },
+       {
+         opcode: 'keisan',
+         blockType: Scratch.BlockType.BOOLEAN,
+         text: '[X] [Y] [Z]', 
+         arguments: {
+           X: {
+             type: "string",
+             defaultValue: ""
+           },
+           Y: {
+             type: "string",
+             menu: "keisan",
+             defaultValue: "+"
+           },
+           Z: {
+             type: "string",
+             defaultValue: ""
            }
          }
        },
@@ -137,7 +157,10 @@ class Tellur {
           items: ['true', 'false', 'Infinity', 'NaN','Undefined'],
         },
         ijyou: {
-          items: ['≦','≧','<','>','≠'],
+          items: ['<=','>=','<','>','≠'],
+        },
+        keisan: {
+          items: ['+','-','*','/'],
         },
       }
     };
@@ -147,6 +170,16 @@ class Tellur {
   }
   jyou(args){
    return Math.pow(args.X, args.N); 
+  }
+  keisan({X,Y,Z}){
+    if (Y==="+"){
+      return X + Z;
+    } else if(Y==="-"){
+      return X - Z;
+    } else if(Y==="*"){
+      return X * Z;
+    }else if(Y==="/"){
+      return X / Z;
   }
   andand({X,Y,Z}){
     return X+Y+Z;
@@ -173,9 +206,9 @@ class Tellur {
     return X;
   }
   ijyou({X,Y,Z}){
-    if (Y==="≦"){
+    if (Y==="<="){
       return X <= Z;
-    } else if(Y==="≧"){
+    } else if(Y===">="){
       return X >= Z;
     } else if(Y==="<"){
       return X < Z;
