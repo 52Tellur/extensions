@@ -18,9 +18,11 @@ class KoKa {
        }
      ]
    }
- }
- power({N}) {
- return N;
- }
+  }
+  power({N}) {
+    var calc_string = "N";
+    var result = Function('return ('+calc_string+');')();
+    return(calc_string);
+  }
 }
 Scratch.extensions.register(new KoKa());
