@@ -5,9 +5,9 @@ class Tellur {
     return {
 	    id: 'Tellur',
 	    name: 'Tellur',
-	    color1: '#50B965',
-	    color2: '#ADD6D4',
-	    color3: '#6CB8B8',
+	    color3: '#50B965',
+	    color1: '#ADD6D4',
+	    color2: '#6CB8B8',
 	    blockIconURI: icon,
 	    menuIconURI: icon,
      blocks: [
@@ -50,7 +50,7 @@ class Tellur {
          arguments: {
            X: {
              type: "string",
-             defaultValue: ""
+             defaultValue: " "
            },
            Y: {
              type: "string",
@@ -59,7 +59,7 @@ class Tellur {
            },
            Z: {
              type: "string",
-             defaultValue: ""
+             defaultValue: " "
            }
          }
        },
