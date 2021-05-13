@@ -3,13 +3,13 @@ class Tellur {
   constructor() {}
   getInfo() {
     return {
-      id: 'Tellur',
-      name: 'Tellur',
-      color1: '#ADD6D4',
-      color2: '#6CB8B8',
-      color3: '#50B965',
-			blockIconURI: icon,
-			menuIconURI: icon,
+	    id: 'Tellur',
+	    name: 'Tellur',
+	    color1: '#50B965',
+	    color2: '#ADD6D4',
+	    color3: '#6CB8B8',
+	    blockIconURI: icon,
+	    menuIconURI: icon,
      blocks: [
        {
          opcode: 'retur',
@@ -160,7 +160,7 @@ class Tellur {
           items: ['<=','>=','<','>','≠'],
         },
         keisan: {
-          items: ['+','-','*','/'],
+          items: ['+','-','*','/','^','%'],
         },
       }
     };
@@ -173,13 +173,17 @@ class Tellur {
   }
   keisan({X,Y,Z}){
     if (Y==="+"){
-      return X + Z;
+	    return X + Z;
     } else if(Y==="-"){
-      return X - Z;
+	    return X - Z;
     } else if(Y==="*"){
-      return X * Z;
+	    return X * Z;
     }else if(Y==="/"){
-      return X / Z;
+	    return X / Z;
+    }else if(Y==="^"){
+	    return X ** Z;
+    }else if(Y==="%"){
+	    return X % Z;
     }
   }
   andand({X,Y,Z}){
