@@ -180,6 +180,7 @@ class Tellur {
       return X * Z;
     }else if(Y==="/"){
       return X / Z;
+    }
   }
   andand({X,Y,Z}){
     return X+Y+Z;
