@@ -79,21 +79,6 @@ class Tellur {
          }
        },
        {
-         opcode: 'jyou',
-         blockType: Scratch.BlockType.REPORTER,
-         text: '[X]の[N]乗', 
-         arguments: {
-           X: {
-             type: "number",
-             defaultValue: '2'
-           },
-           N: {
-             type: "number",
-             defaultValue: '3'
-           }
-         }
-       },
-       {
          opcode: 'andand',
          blockType: Scratch.BlockType.REPORTER,
          text: '[X]と[Y]と[Z]', 
@@ -167,9 +152,6 @@ class Tellur {
   };
   same({X,N}) {
    return X === N;
-  }
-  jyou(args){
-   return Math.pow(args.X, args.N); 
   }
   keisan({X,Y,Z}){
     if (Y==="+"){
