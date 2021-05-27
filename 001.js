@@ -59,13 +59,13 @@ const print = () => {
   logger.info(`     404: ${requests.notFound}`);
   logger.info(` Uniques: ${uniques.size}`);
 
-  logger.info('--- Paths ---');
-  const entries = Array.from(paths.entries()).sort((a, b) => b[1] - a[1]);
-  for (const [path, hits] of entries) {
+  logger.info('— Paths —');
+  const entries = Array.from(paths.entries()).sort((a, b) => b - a);
+  for (const  of entries) {
     logger.info(`${path} - ${hits}`);
   }
 
-  logger.info('---    OS    ---');
+  logger.info('—    OS    —');
   logger.info(` Windows: ${os.windows}`);
   logger.info(`   macOS: ${os.macos}`);
   logger.info(`   Linux: ${os.linux}`);
@@ -75,7 +75,7 @@ const print = () => {
   logger.info(`   Other: ${os.other}`);
   logger.info(`    None: ${os.none}`);
 
-  logger.info('--- Browsers ---');
+  logger.info('— Browsers —');
   logger.info(`  Chrome: ${browser.chrome}`);
   logger.info(` Firefox: ${browser.firefox}`);
   logger.info(`  Safari: ${browser.safari}`);
@@ -90,13 +90,13 @@ if (!environment.isTest) {
 }
 
 const handleRequest = (req) => {
-  if (req.headers['dnt'] !== '1') {
+  if (req.headers !== ‘1’) {
     const ip = req.ip;
     uniques.add(ip);
   }
 
-  const userAgent = req.headers['user-agent'];
-  if (typeof userAgent === 'string') {
+  const userAgent = req.headers;
+  if (typeof userAgent === ‘string’) {
     if (userAgent.indexOf('Chrome') !== -1) {
       browser.chrome++;
     } else if (userAgent.indexOf('Firefox') !== -1) {
