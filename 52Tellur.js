@@ -1,19 +1,30 @@
-class MyExtension {
+class StrictEqualityExtension {
   getInfo() {
     return {
-      id: 'myextensionexample', // change this if you make an actual extension!
-      name: 'Cool Extension',
+      id: 'strictequalityexample', // change this if you make an actual extension!
+      name: 'Strict Equality',
       blocks: [
         {
-          opcode: 'hello',
-          blockType: Scratch.ArgumentType.ANGLE,
-          text: 'Hello, world!'
+          opcode: 'strictlyEquals',
+          blockType: Scratch.BlockType.BOOLEAN,
+          text: '[ONE] strictly equals [TWO]',
+          arguments: {
+            ONE: {
+              type: Scratch.ArgumentType.STRING,
+              defaultValue: 'First value'
+            },
+            TWO: {
+              type: Scratch.ArgumentType.STRING,
+              defaultValue: 'Second value'
+            }
+          }
         }
       ]
     };
   }
-  hello() {
-    return 'Hello, world!';
+  strictlyEquals(args) {
+    // Note strict equality: Inputs must match exactly: in type, case, etc.
+    return args.ONE === args.TWO;
   }
 }
-Scratch.extensions.register(new MyExtension());
+Scratch.extensions.register(new StrictEqualityExtension());
