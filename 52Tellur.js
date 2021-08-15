@@ -1,28 +1,19 @@
-class KoKa {
-  constructor() {}
+class MyExtension {
   getInfo() {
     return {
-     id: 'koka',
-     name: 'KoKa',
-     blocks: [
-         {
-         opcode: 'power',
-         blockType: Scratch.BlockType.REPORTER,
-         text: '[N]を計算する', 
-         arguments: {
-           N: {
-             type: Scratch.ArgumentType.STRING,
-             defaultValue: '3+5'
-           }
-         }
-       }
-     ]
-   }
+      id: 'myextensionexample', // change this if you make an actual extension!
+      name: 'Cool Extension',
+      blocks: [
+        {
+          opcode: 'hello',
+          blockType: Scratch.ArgumentType.ANGLE,
+          text: 'Hello, world!'
+        }
+      ]
+    };
   }
-  power(args) {
-    var calc_string = "N";
-    var result = Function('return ('+calc_string+');')();
-    return(calc_string);
+  hello() {
+    return 'Hello, world!';
   }
 }
-Scratch.extensions.register(new KoKa());
+Scratch.extensions.register(new MyExtension());
