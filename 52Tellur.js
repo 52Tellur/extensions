@@ -11,11 +11,11 @@ class StrictEqualityExtension {
           arguments: {
             ONE: {
               type: Scratch.ArgumentType.NOTE,
-              defaultValue: 'First value'
+              defaultValue: '60'
             },
             TWO: {
               type: Scratch.ArgumentType.MATRIX,
-              defaultValue: 'Second value'
+              defaultValue: '1000000000000000000000001'
             }
           }
         }
