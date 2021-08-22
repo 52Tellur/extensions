@@ -3,7 +3,7 @@ class Tellur {
   constructor() {}
   getInfo() {
     return {
-	    id: 'Tellur',
+	    id: 'Tellur01',
 	    name: 'Tellur',
 	    color3: '#50B965',
 	    color1: '#ADD6D4',
@@ -19,11 +19,11 @@ class Tellur {
     };
   };
   push() {
-	  if ( event.ctrlKey) {
-		  return 'true';
+	  if (event.ctrlKey == true) {
+		  return true;
 	  }
 	  else{
-		  return 'false';
+		  return false;
 	  }
   }
 
