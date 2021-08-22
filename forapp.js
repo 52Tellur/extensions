@@ -12,9 +12,10 @@ class Tellur {
 	    menuIconURI: icon,
      blocks: [
        {
-         opcode: 'retur',
+         opcode: 'push',
          blockType: Scratch.BlockType.BOOLEAN,
-         text: '[X]を返す', 
+         text: 'ctrlキーが押された', 
+	       /*
          arguments: {
            X: {
              type: "string",
@@ -22,189 +23,13 @@ class Tellur {
              defaultValue: "true"
            }
          }
-       },
-       {
-         opcode: 'ijyou',
-         blockType: Scratch.BlockType.BOOLEAN,
-         text: '[X] [Y] [Z]', 
-         arguments: {
-           X: {
-             type: "string",
-             defaultValue: "0"
-           },
-           Y: {
-             type: "string",
-             menu: "ijyou",
-             defaultValue: "<="
-           },
-           Z: {
-             type: "string",
-             defaultValue: "50"
-           }
-         }
-       },
-       {
-         opcode: 'keisan',
-         blockType: Scratch.BlockType.BOOLEAN,
-         text: '[X] [Y] [Z]', 
-         arguments: {
-           X: {
-             type: "string",
-             defaultValue: " "
-           },
-           Y: {
-             type: "string",
-             menu: "keisan",
-             defaultValue: "+"
-           },
-           Z: {
-             type: "string",
-             defaultValue: " "
-           }
-         }
-       },
-       {
-         opcode: 'same',
-         blockType: Scratch.BlockType.BOOLEAN,
-         text: '[X]と[N]は全く同じ', 
-         arguments: {
-           X: {
-             type: "string",
-             defaultValue: 'ｓ'
-           },
-           N: {
-             type: "string",
-             defaultValue: 's'
-           }
-         }
-       },
-       {
-         opcode: 'andand',
-         blockType: Scratch.BlockType.REPORTER,
-         text: '[X]と[Y]と[Z]', 
-         arguments: {
-           X: {
-             type: "string",
-             defaultValue: 'りんご'
-           },
-           Y: {
-             type: "string",
-             defaultValue: 'バナナ'
-           },
-           Z: {
-             type: "string",
-             defaultValue: '桃'
-           }
-         }
-       },
-       {
-         opcode: 'smallbig',
-         blockType: Scratch.BlockType.BOOLEAN,
-         text: '[X]<[Y]<[Z]', 
-         arguments: {
-           X: {
-             type: "number",
-             defaultValue: '0'
-           },
-           Y: {
-             type: "number",
-             defaultValue: '25'
-           },
-           Z: {
-             type: "number",
-             defaultValue: '50'
-           }
-         }
-       },
-       {
-         opcode: 'ifelse',
-         blockType: Scratch.BlockType.BOOLEAN,
-         text: 'もし[X]なら[Y]でなければ[Z]',
-         arguments: {
-           X: {
-             type: Scratch.ArgumentType.BOOLEAN,
-             defauleValue: 'true'
-           },
-           Y: {
-             type: "string",
-             defaultValue: '0'
-           },
-           Z: {
-             type: "string",
-             defaultValue: '50'
-           }
-         }
+	 */
        }
-     ],
-      menus: {
-        retu: {
-          acceptReporters: true,
-          items: ['true', 'false', 'Infinity', 'NaN','Undefined'],
-        },
-        ijyou: {
-          items: ['<=','>=','<','>','≠'],
-        },
-        keisan: {
-          acceptReporters: true,
-          items: ['+','-','*','/','^','%'],
-        },
-      }
     };
   };
-  same({X,N}) {
-   return X === N;
+  push() {
+   return event.ctrlKey;
   }
-  keisan({X,Y,Z}){
-    if (Y==="+"){
-	    return X + Z;
-    } else if(Y==="-"){
-	    return X - Z;
-    } else if(Y==="*"){
-	    return X * Z;
-    }else if(Y==="/"){
-	    return X / Z;
-    }else if(Y==="^"){
-	    return X ** Z;
-    }else if(Y==="%"){
-	    return X % Z;
-    }
-  }
-  andand({X,Y,Z}){
-    return X+Y+Z;
-  }
-  smallbig({X,Y,Z}){
-    if(X<Y){
-      if(Y<Z){
-        return true;
-      } else{
-        return false;
-      }
-    } else{
-        return false;
-    }
-  }
-  ifelse({X,Y,Z}){
-    if(X){
-      return Y;
-    } else{
-      return Z;
-    }
-  }
-  retur({X}){
-    return X;
-  }
-  ijyou({X,Y,Z}){
-    if (Y==="<="){
-      return X <= Z;
-    } else if(Y===">="){
-      return X >= Z;
-    } else if(Y==="<"){
-      return X < Z;
-    }else if(Y===">"){
-      return X > Z;
-    }else if(Y==="≠"){
-      return X !== Z;
-    }
-  }
+
 }
 Scratch.extensions.register(new Tellur());
