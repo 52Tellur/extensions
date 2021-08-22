@@ -7,17 +7,16 @@ class Tellur {
 	    color3: '#50B965',
 	    color1: '#ADD6D4',
 	    color2: '#6CB8B8',
-
 	    menuIconURI: icon,
-     blocks: [
-       {
-         opcode: 'push',
-         blockType: Scratch.BlockType.BOOLEAN,
-         text: 'ctrlキーが押された', 
-       }
-     ]
-   };
- };
+      blocks: [
+        {
+          opcode: 'push',
+          blockType: Scratch.BlockType.BOOLEAN,
+          text: 'ctrlキーが押された', 
+        }
+      ]
+    };
+  };
   push() {
 	  if (event.key === 'v') {
 		  return true;
