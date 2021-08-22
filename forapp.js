@@ -15,20 +15,16 @@ class Tellur {
          opcode: 'push',
          blockType: Scratch.BlockType.BOOLEAN,
          text: 'ctrlキーが押された', 
-	       /*
-         arguments: {
-           X: {
-             type: "string",
-             menu: "retu",
-             defaultValue: "true"
-           }
-         }
-	 */
        }
     };
   };
   push() {
-   return event.ctrlKey;
+	  if ( event.ctrlKey) {
+		  return 'true';
+	  }
+	  else{
+		  return 'false;
+	  }
   }
 
 }
