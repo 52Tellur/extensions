@@ -11,20 +11,14 @@ class Tellur {
       blocks: [
         {
           opcode: 'push',
-          blockType: Scratch.BlockType.BOOLEAN,
-          text: 'ctrlキーが押された', 
+          blockType: Scratch.BlockType.COMMAND,
+          text: 'アラートを鳴らす', 
         }
       ]
     };
-  };
-  push() {
-	  if (event.key === 'v') {
-		  return true;
-	  }
-	  else{
-		  return false;
-	  }
   }
-
+  push() {
+	  alert('ドーン！');
+  }
 }
 Scratch.extensions.register(new Tellur());
