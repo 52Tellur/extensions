@@ -19,7 +19,7 @@ class Tellur {
    };
  };
   push() {
-	  if (event.ctrlKey == true) {
+	  if (event.key === 'v') {
 		  return true;
 	  }
 	  else{
