@@ -11,14 +11,24 @@ class Tellur {
       blocks: [
         {
           opcode: 'push',
-          blockType: Scratch.BlockType.COMMAND,
-          text: 'アラートを鳴らす', 
-        }
+          blockType: Scratch.BlockType.BOOLEAN,
+          text: '[num]を小数第[numnum]位で四捨五入', 
+		arguments: {
+			num: {
+				type: Scratch.ArgumentType.NUMBER,
+				defaultValue: '3.141592'
+			},
+			numnum: {
+				type: Scratch.ArgumentType.NUMBER,
+				defaultValue: '3'
+			}
+		}
+	}
       ]
     };
   }
-  push() {
-	  alert('ドーン！');
+  push(args) {
+	  return num.toFixed(numnum);
   }
 }
 Scratch.extensions.register(new Tellur());
