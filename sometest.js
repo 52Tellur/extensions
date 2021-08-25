@@ -29,10 +29,10 @@ class sometestExtension {
       ]
     };
   }
-  color(args) {
+  color({ONE}) {
     return ONE;
   }
-  MATRIX(args) {
+  MATRIX({ONE}) {
     return ONE;
   }
 }
