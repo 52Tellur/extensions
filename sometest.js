@@ -24,12 +24,12 @@ class sometestExtension {
             ONE: {
               type: Scratch.ArgumentType.MATRIX
               defaultValue: 'First value'
-            },
-          },
-        },
+            }
+          }
+        }
       ]
-    };
-  };
+    }
+  }
   color({ONE}) {
     return ONE;
   }
