@@ -1,7 +1,8 @@
 class sometestExtension {
+  constructor() {}
   getInfo() {
     return {
-      id: 'sometestextensionBlock', 
+      id: 'sometestExtension', 
       name: '実験',
       blocks: [
         {
@@ -23,12 +24,12 @@ class sometestExtension {
             ONE: {
               type: Scratch.ArgumentType.MATRIX
               defaultValue: 'First value'
-            }
-          }
-        }
+            },
+          },
+        },
       ]
     };
-  }
+  };
   color({ONE}) {
     return ONE;
   }
