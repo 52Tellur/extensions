@@ -4,7 +4,7 @@ class Tellur {
   getInfo() {
     return {
 	    id: 'Tellur',
-	    name: 'Tellur',
+	    name: '52Tellur',
 	    color3: '#50B965',
 	    color1: '#ADD6D4',
 	    color2: '#6CB8B8',
@@ -81,19 +81,19 @@ class Tellur {
        {
          opcode: 'andand',
          blockType: Scratch.BlockType.REPORTER,
-         text: '[X]と[Y]と[Z]', 
+         text: '[X]+[Y]+[Z]', 
          arguments: {
            X: {
              type: "string",
-             defaultValue: 'りんご'
+             defaultValue: '1'
            },
            Y: {
              type: "string",
-             defaultValue: 'バナナ'
+             defaultValue: '2'
            },
            Z: {
              type: "string",
-             defaultValue: '桃'
+             defaultValue: '3'
            }
          }
        },
